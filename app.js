@@ -1,5 +1,8 @@
 const bookList = document.querySelector('#book-list');
 
-console.log('the parent node is :',bookList.parentNode);
-console.log('the parent elemnt is :',bookList.parentElement.parentElement);//does the same thing
-console.log(bookList.children)
+console.log('book-list sibliing is :',bookList.nextSibling);
+console.log('book-list sibliing is :',bookList.nextElementSibling);
+console.log('book-list  previous sibliing is :',bookList.previousSibling);
+console.log('book-list previous sibliing is :',bookList.previousElementSibling);
+
+bookList.previousElementSibling.querySelector('p').innerHTML+='<h6>too call for every one else</h6>';
