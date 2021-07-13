@@ -1,8 +1,16 @@
-const bookList = document.querySelector('#book-list');
+var btns = document.querySelectorAll('#book-list .delete');
 
-console.log('book-list sibliing is :',bookList.nextSibling);
-console.log('book-list sibliing is :',bookList.nextElementSibling);
-console.log('book-list  previous sibliing is :',bookList.previousSibling);
-console.log('book-list previous sibliing is :',bookList.previousElementSibling);
+Array.from(btns).forEach(function(btn){
+    btn.addEventListener('click',function(e){
+    //    console.log(e)
+        var li = e.target.parentElement;
+      // console.log(li)
+     li.parentNode.removeChild(li);
+    });
+});
 
-bookList.previousElementSibling.querySelector('p').innerHTML+='<h6>too call for every one else</h6>';
+const link = document.querySelector('#page-banner a');
+link.addEventListener('click',function(e){
+    e.preventDefault();
+    console.log('navagation to ',e.target.textContent ,'was preverneted');
+})
