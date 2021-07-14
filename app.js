@@ -30,4 +30,19 @@ addForm.addEventListener('submit',function(e){
  //add classes
 bookName.classList.add('name');
 deletebtn.classList.add('delete')
+
+
+
+
 });
+//hide books
+const hideBooks = document.querySelector('#hide');
+// console.log(hideBooks)
+hideBooks.addEventListener('change',function(e){
+    if(hideBooks.checked){
+        // console.log('hi')
+        list.style.display = 'none'
+    }else{
+        list.style.display = 'initial'
+    }
+})
