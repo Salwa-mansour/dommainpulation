@@ -8,3 +8,23 @@ list.addEventListener('click',function(e){
         // console.log('aha')
     };
 });
+// add book-list
+const addForm = document.forms['add-book'];
+
+addForm.addEventListener('submit',function(e){
+    e.preventDefault();
+    const value = addForm.querySelector('input[type="text"]').value;
+    //craete elemnt
+    const li = document.createElement('li');
+    const bookName = document.createElement('span');
+    const deletebtn =document.createElement('span');
+    // add content
+    deletebtn.textContent='delete';
+    // deletebtn.classList.add('delete');
+    bookName.textContent = value;
+    // deletebtn.innerText="delte"
+    //append to document
+    li.appendChild(bookName);
+    li.appendChild(deletebtn);
+    list.appendChild(li);
+});
