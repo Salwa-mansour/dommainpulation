@@ -18,13 +18,16 @@ addForm.addEventListener('submit',function(e){
     const li = document.createElement('li');
     const bookName = document.createElement('span');
     const deletebtn =document.createElement('span');
-    // add content
+// add content
     deletebtn.textContent='delete';
     // deletebtn.classList.add('delete');
     bookName.textContent = value;
     // deletebtn.innerText="delte"
-    //append to document
+ //append to document
     li.appendChild(bookName);
     li.appendChild(deletebtn);
     list.appendChild(li);
+ //add classes
+bookName.classList.add('name');
+deletebtn.classList.add('delete')
 });
