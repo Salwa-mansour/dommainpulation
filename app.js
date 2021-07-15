@@ -1,3 +1,7 @@
+document.addEventListener('DOMContentLoaded',function(){
+
+
+
 //delete book
 const list = document.querySelector('#book-list ul');
 list.addEventListener('click',function(e){
@@ -91,3 +95,5 @@ tabs.addEventListener('click',function(e){
 //     });
 //   }
 // });
+//end of document laod event
+});
